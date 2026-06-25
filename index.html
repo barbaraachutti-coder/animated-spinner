@@ -1,77 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <style>
-    body {
-      margin: 0;
-      background: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .yellow-node {
-      offset-path: path('M 164.7 73.3 A 70 70 0 0 1 126.7 164.7');
-      offset-distance: 0%;
-      animation: moveYellow 2.5s linear infinite;
-    }
-
-    .peach-node {
-      offset-path: path('M 35.3 73.3 A 70 70 0 0 0 73.3 164.7');
-      offset-distance: 0%;
-      animation: movePeach 2.5s linear infinite;
-    }
-
-    @keyframes moveYellow {
-      from { offset-distance: 0%; }
-      to   { offset-distance: 100%; }
-    }
-
-    @keyframes movePeach {
-      from { offset-distance: 0%; }
-      to   { offset-distance: 100%; }
-    }
-  </style>
-</head>
-<body>
-  <svg xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 200 200" width="400" height="400">
-
-    <!-- Top arc -->
-    <path d="M 73.3 26.3 A 70 70 0 0 1 126.7 26.3"
-          fill="none" stroke="#E10E0E"
-          stroke-width="14" stroke-linecap="round"/>
-
-    <!-- Right arc -->
-    <path d="M 164.7 73.3 A 70 70 0 0 1 126.7 164.7"
-          fill="none" stroke="#E10E0E"
-          stroke-width="14" stroke-linecap="round"/>
-
-    <!-- Bottom arc -->
-    <path d="M 126.7 173.7 A 70 70 0 0 1 73.3 173.7"
-          fill="none" stroke="#E10E0E"
-          stroke-width="14" stroke-linecap="round"/>
-
-    <!-- Left arc -->
-    <path d="M 35.3 73.3 A 70 70 0 0 0 73.3 164.7"
-          fill="none" stroke="#E10E0E"
-          stroke-width="14" stroke-linecap="round"/>
-
-    <!-- Central rust dot -->
-    <circle cx="100" cy="100" r="8" fill="#8E2A00"/>
-
-    <!-- Turquoise ring on top arc -->
-    <circle cx="100" cy="30" r="7"
-            fill="none" stroke="#78D6C2" stroke-width="4"/>
-
-    <!-- Animated yellow node (right arc, downward) -->
-    <circle r="7" fill="#FFE27A" class="yellow-node"/>
-
-    <!-- Animated peach node (left arc, upward) -->
-    <circle r="7" fill="#FFB2A3" class="peach-node"/>
-
-  </svg>
-</body>
-</html>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <style>
+      @keyframes slideYellow {
+        0% { offset-distance: 0%; }
+        100% { offset-distance: 100%; }
+      }
+      
+      @keyframes slidePeach {
+        0% { offset-distance: 100%; }
+        100% { offset-distance: 0%; }
+      }
+      
+      .yellow-node {
+        animation: slideYellow 4s linear infinite;
+      }
+      
+      .peach-node {
+        animation: slidePeach 4s linear infinite;
+      }
+    </style>
+    
+    <!-- Right arc path for yellow node animation -->
+    <path id="rightArcPath" d="M 406.2 179.9 A 166 166 0 0 1 301.6 406.2" fill="none"/>
+    
+    <!-- Left arc path for peach node animation -->
+    <path id="leftArcPath" d="M 105.8 406.2 A 166 166 0 0 1 210.4 179.9" fill="none"/>
+  </defs>
+  
+  <!-- TOP ARC (55°, centered at 12 o'clock) -->
+  <path d="M 210.4 105.8 A 166 166 0 0 1 301.6 105.8"
+        fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
+  
+  <!-- RIGHT ARC (70°, centered at 3 o'clock) -->
+  <path d="M 406.2 179.9 A 166 166 0 0 1 301.6 406.2"
+        fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
+  
+  <!-- BOTTOM ARC (55°, centered at 6 o'clock) -->
+  <path d="M 301.6 406.2 A 166 166 0 0 1 210.4 406.2"
+        fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
+  
+  <!-- LEFT ARC (70°, centered at 9 o'clock) -->
+  <path d="M 105.8 406.2 A 166 166 0 0 1 210.4 179.9"
+        fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
+  
+  <!-- CENTER DOT -->
+  <circle cx="256" cy="256" r="10" fill="#8E2A00"/>
+  
+  <!-- TOP TURQUOISE RING -->
+  <circle cx="256" cy="115" r="11" fill="none" stroke="#78D6C2" stroke-width="5"/>
+  
+  <!-- YELLOW NODE (animates on right arc) -->
+  <g class="yellow-node">
+    <animateMotion dur="4s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+      <mpath href="#rightArcPath"/>
+    </animateMotion>
+    <circle r="9" fill="#FFE27A"/>
+  </g>
+  
+  <!-- PEACH NODE (animates on left arc) -->
+  <g class="peach-node">
+    <animateMotion dur="4s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1">
+      <mpath href="#leftArcPath"/>
+    </animateMotion>
+    <circle r="9" fill="#FFB2A3"/>
+  </g>
+</svg>
