@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      margin: 0;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .yellow-node {
+      offset-path: path('M 164.7 73.3 A 70 70 0 0 1 126.7 164.7');
+      offset-distance: 0%;
+      animation: moveYellow 2.5s linear infinite;
+    }
+
+    .peach-node {
+      offset-path: path('M 35.3 73.3 A 70 70 0 0 0 73.3 164.7');
+      offset-distance: 0%;
+      animation: movePeach 2.5s linear infinite;
+    }
+
+    @keyframes moveYellow {
+      from { offset-distance: 0%; }
+      to   { offset-distance: 100%; }
+    }
+
+    @keyframes movePeach {
+      from { offset-distance: 0%; }
+      to   { offset-distance: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 200 200" width="400" height="400">
+
+    <!-- Top arc -->
+    <path d="M 73.3 26.3 A 70 70 0 0 1 126.7 26.3"
+          fill="none" stroke="#E10E0E"
+          stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Right arc -->
+    <path d="M 164.7 73.3 A 70 70 0 0 1 126.7 164.7"
+          fill="none" stroke="#E10E0E"
+          stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Bottom arc -->
+    <path d="M 126.7 173.7 A 70 70 0 0 1 73.3 173.7"
+          fill="none" stroke="#E10E0E"
+          stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Left arc -->
+    <path d="M 35.3 73.3 A 70 70 0 0 0 73.3 164.7"
+          fill="none" stroke="#E10E0E"
+          stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Central rust dot -->
+    <circle cx="100" cy="100" r="8" fill="#8E2A00"/>
+
+    <!-- Turquoise ring on top arc -->
+    <circle cx="100" cy="30" r="7"
+            fill="none" stroke="#78D6C2" stroke-width="4"/>
+
+    <!-- Animated yellow node (right arc, downward) -->
+    <circle r="7" fill="#FFE27A" class="yellow-node"/>
+
+    <!-- Animated peach node (left arc, upward) -->
+    <circle r="7" fill="#FFB2A3" class="peach-node"/>
+
+  </svg>
+</body>
+</html>
