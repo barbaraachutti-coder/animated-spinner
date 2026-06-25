@@ -21,40 +21,40 @@
     </style>
     
     <!-- Right arc path for yellow node animation -->
-    <path id="rightArcPath" d="M 419.1 256 A 163.1 163.1 0 0 1 256 419.1" fill="none"/>
+    <path id="rightArcPath" d="M 400 220 A 160 160 0 0 1 340 400" fill="none"/>
     
     <!-- Left arc path for peach node animation -->
-    <path id="leftArcPath" d="M 256 92.9 A 163.1 163.1 0 0 1 92.9 256" fill="none"/>
+    <path id="leftArcPath" d="M 172 400 A 160 160 0 0 1 112 220" fill="none"/>
   </defs>
   
-  <!-- TOP ARC (55°) from 302.5° to 57.5° -->
-  <path d="M 199.5 110.3 A 163.1 163.1 0 0 1 312.5 110.3"
-        fill="none" stroke="#E63946" stroke-width="28" stroke-linecap="round"/>
+  <!-- TOP ARC (55° span) -->
+  <path d="M 165 135 A 160 160 0 0 1 347 135"
+        fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- RIGHT ARC (70°) from 20° to 90° -->
-  <path d="M 419.1 256 A 163.1 163.1 0 0 1 256 419.1"
-        fill="none" stroke="#E63946" stroke-width="28" stroke-linecap="round"/>
+  <!-- RIGHT ARC (70° span) -->
+  <path d="M 400 220 A 160 160 0 0 1 340 400"
+        fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- BOTTOM ARC (55°) from 122.5° to 237.5° -->
-  <path d="M 312.5 401.7 A 163.1 163.1 0 0 1 199.5 401.7"
-        fill="none" stroke="#E63946" stroke-width="28" stroke-linecap="round"/>
+  <!-- BOTTOM ARC (55° span) -->
+  <path d="M 347 377 A 160 160 0 0 1 165 377"
+        fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- LEFT ARC (70°) from 270° to 340° -->
-  <path d="M 92.9 256 A 163.1 163.1 0 0 1 256 92.9"
-        fill="none" stroke="#E63946" stroke-width="28" stroke-linecap="round"/>
+  <!-- LEFT ARC (70° span) -->
+  <path d="M 112 220 A 160 160 0 0 1 172 400"
+        fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
   <!-- CENTER DOT -->
-  <circle cx="256" cy="256" r="12" fill="#8B3A1F"/>
+  <circle cx="256" cy="256" r="10" fill="#8E2A00"/>
   
   <!-- TOP TURQUOISE RING -->
-  <circle cx="256" cy="95" r="13" fill="none" stroke="#4ECDC4" stroke-width="6"/>
+  <circle cx="256" cy="110" r="12" fill="none" stroke="#78D6C2" stroke-width="5"/>
   
   <!-- YELLOW NODE (animates on right arc) -->
   <g class="yellow-node">
     <animateMotion dur="4s" repeatCount="indefinite">
       <mpath href="#rightArcPath"/>
     </animateMotion>
-    <circle r="11" fill="#FFD93D"/>
+    <circle r="9" fill="#FFE27A"/>
   </g>
   
   <!-- PEACH NODE (animates on left arc) -->
@@ -62,6 +62,6 @@
     <animateMotion dur="4s" repeatCount="indefinite">
       <mpath href="#leftArcPath"/>
     </animateMotion>
-    <circle r="11" fill="#F5A99D"/>
+    <circle r="9" fill="#FFB2A3"/>
   </g>
 </svg>
