@@ -21,33 +21,33 @@
     </style>
     
     <!-- Right arc path for yellow node animation -->
-    <path id="rightArcPath" d="M 420 256 A 164 164 0 0 1 256 420" fill="none"/>
+    <path id="rightArcPath" d="M 406 178 A 160 160 0 0 1 334 406" fill="none"/>
     
     <!-- Left arc path for peach node animation -->
-    <path id="leftArcPath" d="M 256 92 A 164 164 0 0 1 92 256" fill="none"/>
+    <path id="leftArcPath" d="M 178 406 A 160 160 0 0 1 106 178" fill="none"/>
   </defs>
   
-  <!-- TOP ARC (55°, from ~302.5° to ~57.5°) -->
-  <path d="M 189 150 A 164 164 0 0 1 323 150"
+  <!-- TOP ARC (55° span) -->
+  <path d="M 175 145 A 160 160 0 0 1 337 145"
         fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- RIGHT ARC (70°, from ~20° to ~90°) -->
-  <path d="M 420 256 A 164 164 0 0 1 256 420"
+  <!-- RIGHT ARC (70° span) connects to top -->
+  <path d="M 406 178 A 160 160 0 0 1 334 406"
         fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- BOTTOM ARC (55°, from ~122.5° to ~237.5°) -->
-  <path d="M 323 362 A 164 164 0 0 1 189 362"
+  <!-- BOTTOM ARC (55° span) -->
+  <path d="M 337 367 A 160 160 0 0 1 175 367"
         fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- LEFT ARC (70°, from ~270° to ~340°) -->
-  <path d="M 92 256 A 164 164 0 0 1 256 92"
+  <!-- LEFT ARC (70° span) connects to top -->
+  <path d="M 106 178 A 160 160 0 0 1 178 406"
         fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
   <!-- CENTER DOT -->
   <circle cx="256" cy="256" r="10" fill="#8E2A00"/>
   
   <!-- TOP TURQUOISE RING -->
-  <circle cx="256" cy="100" r="12" fill="none" stroke="#78D6C2" stroke-width="5"/>
+  <circle cx="256" cy="105" r="12" fill="none" stroke="#78D6C2" stroke-width="5"/>
   
   <!-- YELLOW NODE (animates on right arc) -->
   <g class="yellow-node">
