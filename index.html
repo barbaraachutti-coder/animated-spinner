@@ -21,35 +21,35 @@
     </style>
     
     <!-- Right arc path for yellow node animation -->
-    <path id="rightArcPath" d="M 400 256 A 144 144 0 0 1 256 400" fill="none"/>
+    <path id="rightArcPath" d="M 419.1 256 A 163.1 163.1 0 0 1 256 419.1" fill="none"/>
     
     <!-- Left arc path for peach node animation -->
-    <path id="leftArcPath" d="M 256 112 A 144 144 0 0 1 112 256" fill="none"/>
+    <path id="leftArcPath" d="M 256 92.9 A 163.1 163.1 0 0 1 92.9 256" fill="none"/>
   </defs>
   
-  <!-- TOP ARC (55°, ~27.5° on each side of 12 o'clock) -->
-  <path d="M 172 158 A 144 144 0 0 1 340 158"
+  <!-- TOP ARC (55°) from 302.5° to 57.5° -->
+  <path d="M 199.5 110.3 A 163.1 163.1 0 0 1 312.5 110.3"
         fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- RIGHT ARC (70°, ~35° on each side of 3 o'clock) -->
-  <path d="M 400 256 A 144 144 0 0 1 256 400"
+  <!-- RIGHT ARC (70°) from 20° to 90° -->
+  <path d="M 419.1 256 A 163.1 163.1 0 0 1 256 419.1"
         fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- BOTTOM ARC (55°, ~27.5° on each side of 6 o'clock) -->
-  <path d="M 340 354 A 144 144 0 0 1 172 354"
+  <!-- BOTTOM ARC (55°) from 122.5° to 237.5° -->
+  <path d="M 312.5 401.7 A 163.1 163.1 0 0 1 199.5 401.7"
         fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
-  <!-- LEFT ARC (70°, ~35° on each side of 9 o'clock) -->
-  <path d="M 112 256 A 144 144 0 0 1 256 112"
+  <!-- LEFT ARC (70°) from 270° to 340° -->
+  <path d="M 92.9 256 A 163.1 163.1 0 0 1 256 92.9"
         fill="none" stroke="#E10E0E" stroke-width="28" stroke-linecap="round"/>
   
   <!-- CENTER DOT -->
   <circle cx="256" cy="256" r="10" fill="#8E2A00"/>
   
   <!-- TOP TURQUOISE RING -->
-  <circle cx="256" cy="125" r="11" fill="none" stroke="#78D6C2" stroke-width="5"/>
+  <circle cx="256" cy="95" r="11" fill="none" stroke="#78D6C2" stroke-width="5"/>
   
-  <!-- YELLOW NODE (animates on right arc, ~30% down) -->
+  <!-- YELLOW NODE (animates on right arc) -->
   <g class="yellow-node">
     <animateMotion dur="4s" repeatCount="indefinite">
       <mpath href="#rightArcPath"/>
@@ -57,7 +57,7 @@
     <circle r="9" fill="#FFE27A"/>
   </g>
   
-  <!-- PEACH NODE (animates on left arc, ~70% down from top) -->
+  <!-- PEACH NODE (animates on left arc) -->
   <g class="peach-node">
     <animateMotion dur="4s" repeatCount="indefinite">
       <mpath href="#leftArcPath"/>
